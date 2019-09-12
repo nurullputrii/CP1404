@@ -1,0 +1,26 @@
+BoxLayout:
+    orientation: 'vertical'
+
+    BoxLayout:
+        orientation: 'horizontal'
+        TextInput:
+            text: ' '
+            id: input_number
+            multiline: False
+            on_text: app.handle_calculate()
+        BoxLayout:
+            orientation: 'vertical'
+            Button:
+                text: 'up'
+                font_size: 40
+                on_press: app.handle_increment(+1)
+            Button:
+                text: 'down'
+                font_size: 40
+                on_press: app.handle_increment(-1)
+    Label:
+        text: app.message
+        id: output_result
+        font_size: 40
+
+
